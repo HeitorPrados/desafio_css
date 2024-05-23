@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: white;
+}
+
+.div1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div2 {
+    position: relative;
+    width: 400px;
+    height: 240px;
+    background-color: #5EFEB1;
+    border: 40px solid red;
+}
+
+.bola1 {
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+@keyframes bola2para5 {
+    0%, 100% { top: -60px; left: 160px; }
+    50% { top: 80px; left: 380px; }
+}
+
+@keyframes bola5para3 {
+    0%, 100% { top: 80px; right: -60px; }
+    50% { top: 220px; right: 160px; }
+}
+
+@keyframes bola3para4 {
+    0%, 100% { bottom: -60px; left: 160px; }
+    50% { bottom: 80px; left: -60px; }
+}
+
+@keyframes bola4para2 {
+    0%, 100% { top: 80px; left: -60px; }
+    50% { top: -60px; left: 160px; }
+}
+
+.bola2, .bola3, .bola4, .bola5 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.bola2 {
+    top: -60px;
+    left: 160px;
+    background-color: lightyellow;
+    animation-name: bola2para5;
+}
+
+.bola5 {
+    top: 80px;
+    right: -60px;
+    background-color: lightblue;
+    animation-name: bola5para3;
+}
+
+.bola3 {
+    bottom: -60px;
+    left: 160px;
+    background-color: darkred;
+    animation-name: bola3para4;
+}
+
+.bola4 {
+    top: 80px;
+    left: -60px;
+    background-color: pink;
+    animation-name: bola4para2;
+}
